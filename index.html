@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BERÇEM UÇAR</h1>
+    <h2>Hakkımda</h2>
+    <p>Ben Berçem Uçar Yazılım Mühendisliği Bölümünden mezunum web geliştirme
+        <br> ile ilgileniyorum. Sağlıklı beslenmeyi ve spor yapmayı seviyorum.
+    </p>
+
+    <h2>Sevdiğim Diziler</h2>
+    <h3>Güneşi Beklerken:</h3>
+    <p>Çok sevdiğim bir diziydi küçükken cok fazla izlerdim.</p>
+    </body>
+    </html>
+
+     <!-- bir görsel eklemek için <img src=""..  alt=""/> resimin URL'sini src kısmına görüntü görünmedigi durumda görünmesini istedgimiz 
+      yazıyı da alt kısmına yazarız >
+    <img src="../images/kedi.jpg" title="image"/>	 bu şekilde de kullanım olabilir
+    Title ve alt parametreleri seo açısından önem taşır
+    Görsele istenen ölçüleri vermek için width ve height özellikleri kullanılır.
+    Width yatay genişlik, Height ise dikey uzunluk için kullanılır.
+    <img src="resim.jpg" width="300" height="600" />
+
+    <img src="resim.jpg" border="3" /> border ile  istedigimiz kalınlıkta 
+    çerçeve içine alırız görseli
+
+    Web sayfasında resmin gözükeceği pozisyonu belirlemede align özelliği 
+    kullanılır. Bu özelliğe verilebilecek değerler şunlardır: left, right. 
+    Görselin sağa veya sola yaslı çıkmasını sağlar.
+
+<img src="resim.jpg" align="right" />
+
+Görsele link vermek için imgtag'i a taginin içerisinde kullanılır. 
+Yönlendirilmek istenen yerin URL'i a taginin href özelliğine yazılır. 
+Görsel ise a taginin açıklama kısmına eklenir.
+
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+
+<img> etiketleri için kullanılan <map> ve <area> etiketleri ile resmin 
+içindeki koordinatlarla belirlediğimiz bir alanı sadece link haline 
+getirebiliriz. Eklediğimiz <area> etiketi kadar belirlenen alanı bir resim 
+üzerinden birçok bağlantıya link verebiliriz.
+
+Örneğin Instagram'da bazı satıcılarda gördüğünüz bir insan fotoğraf üzerinde 
+pantolon ve ayakkabının ürün linklerini ayrı ayrı vermek isterseniz 
+kullanabilirsiniz.
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+ <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+ <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+ <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+
+bu şekilde kullanılabilir...
+
+onload Event'i Kullanımı
+Bu olay görsel yüklenmesi tamamlandığında çalışacak fonksiyonu belirler. 
+Herhangi bir nedenle görsel yüklenemezse ya da belirtilen adreste resim 
+yoksa fonksiyon çalışmaz.
+
+Aşağıdaki örnekte görsel yüklenmesi tamamlandığında resimYuklendi()
+fonksiyonu çalışacak ve ekrana Resim Yüklendi. uyarısı JavaScript tarafından 
+bastırılacak.
+
+<html>
+    <body>
+        <img src="resim.jpg" onload="resimYuklendi()" />
+    </body>
+    
+    <script>
+        function resimYuklendi(){
+            alert("Resim yüklendi.");
+        }
+    </script>
+</html>
+
+picture Elementi ile Kullanım
+HTML5 ile gelen picture elementi web sayfamızda responsive image'ler 
+kullanmamız konusunda büyük kolaylıklar sağlıyor. Bir tane img ve birden fazla 
+source içerebilir. picture tagi ekran boyutlarına göre birden çok source 
+kulllanmamızı sağlar bu sayede ekran boyutu değiştikçe farklı image'leri 
+kullanabilirsiniz.
+
+Örnek: Burada ekran genişliğinin 800 pikselden küçük olduğu durumlarda başka 
+diğer koşullarda ise başka bir görsel kullanılacak.
+
+<picture>
+    <source srcset="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" media="(min-width: 800px)">
+    
+    <img src="/media/cc0-images/painted-hand-298-332.jpg" alt="" />
+</picture>
+
+Tarayıcı, her bir source öğesini inceleyip eşleşme sağlar. Eşleşme bulunamazsa 
+veya tarayıcı <picture> öğesini desteklemiyorsa, <img> öğesinin src URL'si 
+seçilir. Seçilen görüntü daha sonra <img> öğesinin kapladığı alanda sunulur.
+
+<LİNKLERLE ÇALIŞMAK>
+- aynı sayfa içinde bir yere 
+-başka bir sayfaya gidebiliriz
+-mail atabiliriz
+-telefon et olabilir
+
+<a href="....com" target ="_blank">
+    buraya gidilecek
+    </a        //bu kısımda gitmek istedigimiz adresi href içine yazıyoruz 
+    link şeklinde görünen yazımız da buraya gidilecek yazan kısımdır
+    target yazmadıgımız zaman link bulunduğumuz sayfada açılır ama target ile istedigmiz şekilde yönlendirebiliriz
+    burda _blank yazdık ve bu baska sayfada açılması anlamına geliyor
+
+    -Sayfada istedigmiz bölüme ekranı kaydırmadan bir yazıya bir sembole tıklayarak direk gidebiliriz
+    bunu da 
+
+    gitmek istedigimiz bölüm örneğin en alt kısım olsun bunu 
+    <h2 id=alt"> En alt kısım </h2>
+    bu şekilde gitmesini istedigmiz paragraf başlık her neyse buna bir id veriyoruz
+    sonra bu id'yi tıklayacağımız şeye sembol yazı neyse oraya şu şekilde yazıyoruz;
+    <a href="#alt">
+        En alt kısma git
+    </a>    bu linke tıklayınca idsni verdiğimiz kısma gidecek sayfa içindeeee
+
+Mail ve telefon yönlendirmesinde kullanımı:
+a etiketinin href özelliğine verilen mailto: ve tel: özellikleri
+ sayesinde direkt olarak herhangi bir e-mail adresine posta 
+ gönderilebilir ya da geçerli bir telefon numarası aranabilir. 
+
+ <br> alt satıra geçmemizi sağlar 
+ <hr> bir çizgi oluşturur 
+
+ <div> blok elementtir 
+ <span> inline bir element şeffaf bi kutu olarak düşünebiliriz..
+ 

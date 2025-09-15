@@ -1,0 +1,253 @@
+<!--bir HTML dökümanı oluşturmak isterseniz ilk yapacağınız iş bir 
+<html> etiketi oluşturmaktır. Ardından HTML etiketi altına
+<head> ve <body> etiketlerini yazmalısınız.
+    <html>   <head></head> 
+  <body></body>
+</html> 
+
+<head> etiketi, site ziyaretçileri tarafından görülmesi gerekmeyen 
+kodları içerir. Bu etiket altına yazılan kodlar genellikle arama motorları 
+ve örümcekler (Crawler veya Spider diye geçer) içindir. <head> etiketi altında
+<title> (Bu etiketi kullanmak şarttır) <meta> <style> <script> <noscript>
+<link>  <base> bu etiketleri kullanabiliriz
+
+
+Web sayfamızda görmek istediğimiz bütün içerikleri <body> etiketi altına yazıyoruz.
+
+
+<ul> ve <ol> etiketleri liste oluşturma etiketleridir. Listeyi oluşturduktan 
+    sonra içeriğini oluşturmak için <li> etiketini kullanıyoruz.   
+        <ul> = "unordered list" sırasız liste anlamına geliyor.
+             <ol> = "ordered list" sıralı liste anlamına geliyor. 
+
+## HR Etiketi
+
+`<hr>` etiketi konusal bir geçişi temsil eder. 
+Yazı yazarken yeni bir paragrafa başlamaya benzetebiliriz. 
+Varsayılan olarak sayfaya yatay bir çizgi ekler ama bu özelliği değiştirilebilir.
+ Bu etiket kapatılmaya ihtiyaç duymaz.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      HTML yani Hiper Metin İşaretleme Dili, web sayfalarında gördüğümüz iskelet
+      yapısını oluşturmak için kullanılan metin işaretleme dilidir.
+    </p>
+
+    <hr>
+
+    <p>
+      CSS, HTML elementlerinin çeşitli medya araçlarında nasıl ekrana
+      yansıtılacağını tanımlayan bir dildir. Tek seferde birden çok sayfa için
+      kurallar belirtebilir.
+    </p>
+               
+    <strong> etiketi bir metinin arama motorlarına önemli olduğunu bildirmek 
+        için kullanılır. Kullanıldığı zaman metini kalın yapar. 
+    Eğer sadece metini kalınlaştırmak isterseniz <b> etiketini kullanabilirsiniz.
+        <h2><strong> Kodluyoruz </strong></h2>
+        <p><b> HTML </b> Etiketleri </p>
+
+    <script> etiketi JavaScript kodlarını HTML içerisine yazabilmemizi sağlar.
+        <body>
+    <script>
+        document.write("Kodluyoruz")
+    </script>
+        </body>
+
+        <button> etiketini buton oluşturmak için kullanırız
+             <button> Buton </button>
+
+    Resim eklemek için<img> etiketini kullanıyoruz.
+    <img src=”resim.jpg” alt=”açıklama yazısı” /> 
+    src="" kısmına eklemek istediğimiz görselin yolunu yani kaynağını yazmalıyız
+    Eğer görselimiz ve HTML dosyamız aynı klasörde ise görselin adını 
+    ve uzantısını yazmamız yeterlidir. alt="" kısmına görselin açıklamasını 
+    yazıyoruz fakat isterseniz boş bırakabilirsiniz.
+
+      <img src=”görseller/kodluyoruz.jpg” alt=”Kodluyoruz Bootcamp” />
+
+      <iframe>
+    Genelde başka bir sitedeki belgeyi kendi sayfamızda göstermek için 
+    kullanırız. örn: Youtube'dan bir videoyu sayfamızda göstermek istersek 
+    <iframe> kodlarını sayfamıza eklememiz yeterli.
+     <iframe width="1519" height="581" src="https://www.youtube.com/embed/BHPYQHnD_QA" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+
+html sayfalarımızı nasıl daha bilinir ve gelişmiş hale getirebiliriz öğrenelim.
+
+Title Etiketi
+Bu etiketimiz html dökümanlarında türkçe anlamı olan "başlık" görevini üstlenir. 
+Bu etiket arasına yazdıklarımız aynı zamanda sayfayı favorilere eklerken de karşımıza çıkar.
+Ayrıca arama motorları (Google, Yahoo, Bing ...) sayfamızın bu kısmına bakarak sitemizi listeler. 
+
+Style ve Script Etiketleri
+HTML dökümanları oluştururken en çok kullanacağımız etiketler bunlardır. 
+Bu etiketler yalnızca <head></head> etiketleri arasında bulunmaz ancak
+biz burada bulunabilecek bazı özel türleri ve bu tür etiketlerin özelliklerini 
+(attribute) inceleyeceğiz
+
+Öncelikle style etiketinden başlayalım. <style></style> etiketleri arasında 
+sayfamızı güzelleştiren, renklendiren belli özellikler tanımlayabiliyoruz.
+
+<script></script> etiketleri ileride öğreneceğiniz sihirli bir dünyaya 
+açılan kapıdır.
+
+Eğer script etiketini kullanırken herhangi bir özellik eklemezsek browser sırası geldiğinde doğrudan işlenir. Ve bu kısım işlenmeden sayfa yüklenmeye devam etmez. Bu noktada da async özelliğimiz devreye giriyor. Eğer sayfanın yüklenmeye devam ederken eşzamanlı olarak bu etiketlerle belirlediğimiz scriptlerin de yüklenmesini ve hazırlanmasını istiyorsak, yani bu kısmın asenkron çalışmasını istiyorsak etiketimize bu özelliği ekliyoruz. Herhangi bir değer girmemize gerek yok şu şekilde kullanabiliriz :
+
+<script src="myJavascript.js" async></script>
+Eğer bu etiketin sayfa yüklendikten sonra yüklenip çalıştırılmasını 
+istiyorsak o zaman async özelliğinin yanına defer özelliğini de eklememiz 
+gerekiyor. Ancak bu iki özellik de yalnızca sayfa harici kaynaktan yani 
+bu HTML içinde yazmadığımız javascripti yüklerken kullanabileceğimiz 
+özellikler. Buna da dikkat etmemiz gerekiyor.
+
+Browserlar, istek sahteciliği gibi güvenlik sorunlarıyla aktif şekilde mücadele
+etmeye çalışıyor. Bu yüzden bir kaynaktaki dökümanın bir diğer kaynaktaki 
+(farklı domain) dökümanlara erişmesinde biraz hassas davranıyorlar. 
+Bu konuya cross origin resource sharing deniyor kısaca CORS diyebiliriz.
+
+İşte bu etiketimiz de farklı kaynaklardaki, farklı domainlerdeki scriptleri 
+yüklememiz için bize yardımcı oluyor. Eğer bir kaynaktan(aynı domain dahil) 
+bir şey yüklemek için belli bilgileri( Çerezlerimiz olabilir, 
+HTTP basit giriş bilgileri olabilir) göndermemiz gerekiyorsa bu özelliğin 
+değerini crossorigin = "use-credentials" olarak belirlemeliyiz. 
+Eğer anonim şekilde erişmemiz gerekiyorsa yani herhangi bir bilgiye ihtiyaç 
+yoksa crossorigin="anonymous" olarak kullanacağız.
+
+Bir diğer özelliğimiz ise integrity özelliğidir. Integrity türkçeye 
+bütünlük, doğruluk, dürüstlük şeklinde çevirilebilir.
+ Örnek olarak HTML sayfamıza ekleyeceğimiz bir dış script bir güvenlik açığıyla
+karşı karşıya kaldığında o scripti kullanan bütün sayfalar aynı anda etkilenmiş 
+olacak. İşte CDN dediğimiz bu gibi hazır scriptleri eklediğimiz durumlarda bir 
+doğrulama yöntemine ihtiyaç duyuyoruz. Yani browser bir şekilde, sayfamızı 
+etkileyecek kodların bizim istediğimiz eklediğimiz kodlar olduğunu doğrulaması 
+gerekiyor. Bu noktada da integrity özelliği devreye giriyor. Sayfamızda 
+kullanacağımız hazır kodların bir imzasını bu özelliğe değer olarak ekliyoruz. 
+Bu imza doğrudan kodun kendisinden oluşturulur ve belli bir karakter 
+uzunluğundadır. Ayrıca kodda bir harf bile değişecek olsa imza tutmayacaktır.
+ Bu sayede eğer kodda zararlı/zararsız herhangi bir değişiklik olursa browser 
+ imzalar uyuşmayacağı için kodları sayfamıza yüklemeyecektir.
+
+ Örnek olarak şu şekilde kullanabiliriz :
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+crossorigin="anonymous"></script>
+
+Bir diğer etiketimiz de refreferrerpolicy. Bu etiket de scripti yükleyeceğimiz 
+zaman, alacağımız kaynağa atacağımız verileri eklemek için kullanılır.
+
+HTML sayfamızı oluştururken sayfa içerisindeki kod ne kadar uzun olursa 
+okunması, yazılması ve incelenmesi o kadar zor olur. 
+Bu yüzden kodları farklı sayfalara bölüp kullanmak hem daha kullanışlı 
+hem de daha verimli olur. İşte bu amaçla farklı sayfalardaki scriptleri 
+yükleyebilmek için de script etiketini kullanabiliriz. Bu amaçla script 
+etiketinin src özelliğini kullanırız. Bu özellikle hem kendi dosya sistemimizde 
+hem de internet üzerinde herhangi bir adreste bulunan kodları kendi sayfamıza 
+ekleyebiliriz.
+
+Örnek olarak kendi dosya sistemimizde, html dökümanımızla aynı dizinde bulunan 
+bir script dosyasını çağırmak için:
+
+<script src="myJavascript.js"></script>
+Veya bir web sayfasındaki başka bir scripti çağırmak için :
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+crossorigin="anonymous"></script>
+
+Son olarak da bu etiketle kullanabileceğimiz type özelliğimiz, 
+yüklenecek dosyanın içeriğinin, browser tarafından nasıl yorumlanması 
+gerektiğini belirtir. Örnek olarak javascript dosyası yüklemek için yüklenecek 
+kodların javascript kodunu belirtmek için şöyle yazabiliriz :
+
+<script type="application/javascript"> document.getElementById("someTestDiv").innerHTML = "This code runs as js";
+</script>
+
+Ya da Ecmascript için :
+<script type="application/ecmascript"> document.getElementById("someTestDiv").innerHTML = "This code runs as js";
+</script>
+
+Link Etiketi
+<link></link> etiketi de script etiketinin src özelliği ile kullanılması gibi 
+link etiketini de farklı kaynaklardan farklı dosyaları HTML dökümanımıza dahil 
+etmek için kullanabiliriz. Bu etiket dökümanımızda bulunmayan dış kaynaklarla 
+dökümanımız arasındaki ilişki kurmak için kullanılır.
+
+Bu etikette de crossorigin özelliği mevcuttur.
+
+Bu etikette ilişki kurmak istediğimiz dış kaynağı href özelliği ile veriyoruz. 
+Bu özelliğin açılımı Hypertext REFerence şeklindedir. Örnek olarak bir 
+CSS sayfasını HTML dökümanımız ile ilişkilendirmek için şu kodu kullanabiliriz :
+
+<link rel="stylesheet" href="styles.css">
+href özelliğini hem dış kaynaklardan hem de dökümanımızın bulunduğu dosyadan 
+ilişkilendirme yapmak için kullanabiliriz.
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+crossorigin="anonymous">
+
+Bu etiketin önemli özelliklerinden birisi de rel özelliğidir. 
+Bu özellik dış kaynaktaki dosyayı kendi HTML dökümanımıza ne şekilde 
+ilişkilendirmek istediğimizi belirttiğimiz kısımdır. En çok kullanılan 
+değerleri "stylesheet" ve "icon" dur. Stylesheet eklemek istediğimiz 
+dosyanın bir stil dosyası olduğunu söyler. Böylece browser oradaki komutları 
+HTML'imizi şekillendirmede ve değiştirmede kullanır.
+
+ Bulunduğumuz dizinde .ico uzantılı bir favicon.ico dosyamız varsa bu dosyayı 
+ sekmelerde ismin yanında ikon olarak göstermek üzere şöyle bir kod kullanabiliriz :
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+Son olarak link etiketi de type özelliği kullanır. Bu özellikle de 
+ilişkilendirdiğimiz dosyanın tipini vermiş oluyoruz. Yaygın kullanılan
+ değerleri stil dosyaları için type = "text/css" şeklinde, ikonlar için de
+  type="image/x-icon" şeklindedir.
+
+  Meta Etiketi
+Burada vereceğimiz bilgiler sitemizi arama motorlarına, sosyal medyaya ve 
+diğer sitelere tanıtmak ve dökümanımızla ilgili bilgiler vermek için 
+kullanılacak veriler olacak.
+
+Bizim latin alfabesi için verilen charset kodu UTF-8 dir.
+
+<meta charset="UTF-8">
+
+dökümanımızda o dökümana ulaşan birisinin browser'inde header alanında bir 
+bilgi tutmak istiyorsak bu meta etiketi özelliğini kullanabiliriz.
+<meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+Ayrıca refresh başlığını(header) bu meta yardımıyla belirleyerek sayfamızın belli sürede bir yenilenmesini veya belli bir süre sonra başka bir sayfaya yönlendirilmesini sağlayabiliriz.
+
+<meta http-equiv="refresh" content="10;URL=kodluyoruz.html">
+Yukarıdaki kodda sayfa yüklendikten 10 saniye sonra URL ile verdiğimiz 
+değer olan kodluyoruz.html'ye yönlendirilecek.
+
+Burada kullandığımız diğer etiket de content etiketidir. Bu da meta olarak 
+verdiğimiz bilgilerin içeriğini tanımlamamızı sağlar.
+
+Son özelliğimiz de name özelliğimizdir. Bu da meta bilgi olarak vereceğimiz bilginin tanımlayıcısıdır diyebiliriz. Örnek olarak sayfamızda en çok geçen harfin ne olduğunu belirteceğimiz bir meta bilgisi yazmak isteyelim:
+
+<meta name="enCokGecenHarf" content="a">
+Bu şekilde istediğimiz meta bilgiyi sayfamızın başlık etiketleri 
+arasında kullanabiliriz.
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Burada genişliğin cihaz genişliğinde olduğunu ve zoom oranının 1.0 olacağını 
+tarayıcıya belirmiş oluyoruz. Böylece mobilde masaüstü görünümü gibi bir 
+görünüm değil olması gerektiği gibi düzgün bir görüntü elde ediyoruz.
+
+
+
+
+    -->
