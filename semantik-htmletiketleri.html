@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantik</title>
+</head>
+<body>
+    <!--Semantik olarak anlamlandırılmış bir element hem tarayıcıya hem geliştiriciye ne anlama 
+        geldiğini açık bir şekilde belirtir. <div> ve <span> gibi elementler semantik olmayan 
+        elementlerdir ve mevcut içeriğin hakkında bilgi vermezler. <form>, <table> ve <img> gibi 
+        elementler semantik elementlerdir ve içeriği açıkça belirtirler.-->
+
+        <!--header Elementi
+        header elementi bir doküman veya bir <section> için bir başlık olduğunu belirtir. 
+        İçinde barındırdığı içeriği kapsayıcı olmalıdır. Bir dokümanda birden fazla kullanılabilir
+        
+        Aşağıdaki örnek, bir <article> için bir başlık içermektedir.-->
+    <header> 
+    <h1>BAŞLIK -HEADER KISMI</h1>
+    </header>
+        <p>Her bireyin, özellikle kadınların, yükselen teknoloji sektöründe başarılı olması için eşit 
+    haklara sahip olması gerektiğine inanıyoruz.
+        </p> 
+    <!--nav Elementi
+    nav elementi navigasyon bağlantıları büyük sayfalar için ortaya çıkarılmıştır. 
+    Fakat, sayfadaki tüm linkler bu element içinde olmak zorunda değildir.
+    Genellikle sayfanın üst kısmında veya yan tarafında olur.
+    Menü çubukları, kategori listeleri, site içi yönlendirmeler <nav> içinde tanımlanır.-->
+    <nav>
+        <ul>
+           <h1 style="color: palevioletred;">NAV KISMI</h1>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+  <!--Burada <nav> etiketi içinde bir liste var ve bu linkler sitenin navigasyonunu oluşturuyor.-->
+    </nav>
+    <!--<section> bir doküman içinde olan sadece bir kısmı belirtir.
+        Sayfa içinde mantıksal bölümler oluşturmak için kullanılır.
+        Her bölümün genelde bir başlığı (<h2>, <h3>) olur.
+        İçeriği daha düzenli ve anlamlı hale getirir.-->
+        
+<main>
+  <section>
+    <h1 style="color: palevioletred;">SECTİON kısmıdır İçinde Başlık + içerik olur</h1>
+    <h2>Hakkımızda</h2>
+    <p>Biz genç girişimciler tarafından kurulmuş bir ekibiz.</p>
+  </section>
+
+  <section>
+    <h1 style="color: palevioletred;">SECTİON</h1>
+    <h2>Hizmetlerimiz</h2>
+    <ul>
+      <li>Web Tasarımı</li>
+      <li>Mobil Uygulama</li>
+      <li>Dijital Pazarlama</li>
+    </ul>
+    </section>
+</main>
+  <!--sectionda amaç konuları ayırmak
+    İçinde Başlık + içerik olur
+    Kod okunabilirliği açısından iyi + SEO (arama motorları bölümleri daha iyi anlar)-->
+        
+
+    <!--<figure> elementi içeriğinde HTML5’te görsel içerikleri (resim, grafik, tablo, kod bloğu vs.)
+        gibi nesnelerin oldugunu belirtir Genellikle yanında açıklama (<figcaption>) ile birlikte 
+        kullanılır.-->
+
+       
+<figure>
+     <h1 style="color: palevioletred;">FİGURE KISMIIIII</h1>
+  <img src="yerli-filmler-2019-da-yine-zirvede.jpg" alt="film">
+  <figcaption>önerilen film</figcaption>
+</figure>
+
+<!--<aside> etiketi ise Ana içeriğe ek, yan bilgi veren semantik HTML5 etiketidir.
+Sayfanın “esas konusu” dışında kalan ama ona destekleyici / ek bilgi sağlayan içerikler için kullanılır.
+Genelde sidebar (yan menü), reklam alanı, yazar bilgisi, önerilen içerikler gibi şeylerde kullanılır.-->
+
+<article>
+    <h1 style="color: palevioletred;">ARTİCLE elementi bir makale elementidir.</h1>
+  <h2>HTML Öğrenmek</h2>
+  <p>HTML, web sayfalarının iskeletini oluşturan dildir.</p>
+    <h1 style="color: rgb(216, 62, 170);">ARTİCLE İÇİNDE ASİDE kısmı Ana içeriğe ek, yan bilgi verir</h1>
+  <aside>
+    <h3>İpucu </h3>
+    <p>HTML5 ile birlikte <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code> gibi yeni etiketler geldi.</p>
+  </aside>
+</article>
+<!--<article> elementi bir makale elementidir. Genelde bu elementin kullanabildiği yerler forum 
+    mesajları, blog gönderileri, haber metinleri, yorumlar gibi makale içeren metinlerdir.-->
+
+    <!--<footer> elementi bir doküman ya da kısım için alt bilgilerini belirtir. Bir<footer>
+         genelde dokümanın yazarını, telif haklarını, kullanım gizliği, iletisim vs. gibi bilgileri 
+         içerir ve bir dokümanda bir kereden fazla kullanılabilir. HTML5’te sayfanın veya bir 
+         bölümün alt kısmını tanımlar.-->
+
+<!--Her sayfada bir tane kullanılabilir ama istersen her <article> veya <section> içinde de kendi 
+    footer’ı olabilir.-->
+<footer>
+    <h1 style="color: rgb(231, 56, 164);">FOOTER KISMIIIII</h1>
+  <p>© 2025 Bercem | Tüm Hakları Saklıdır.</p>
+  <p><a href="mailto:info@ornek.com">info@ornek.com</a></p>
+</footer>
+
+</body>
+</html>
